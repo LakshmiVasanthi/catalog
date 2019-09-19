@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Data</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<form action="{{url_for('editdata',register_id=register.id)}}" method="POST">
+		<div class="form-group">
+
+      
+
+      <label for="uname">Username:</label>
+      <input type="text" class="form-control" id="uname" placeholder="Enter name" name="name" value="{{register.name}}">
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="sur">surname</label>
+      <input type="text" class="form-control" id="sur" placeholder="Enter surname" name="surname" value="{{register.surname}}">
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile:</label>
+      <input type="text" class="form-control" id="mobile" placeholder="Enter phone" name="mobile" value="{{register.mobile}}">
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="email">email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" value="{{register.email}}">
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="branch">branch:</label>
+      <input type="text" class="form-control" id="branch" placeholder="Enter branch" name="branch" value="{{register.branch}}">
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="roll">roll:</label>
+      <input type="text" class="form-control" id="roll" placeholder="Enter roll" name="roll" value="{{register.roll}}">
+     
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>
